@@ -1,5 +1,5 @@
 CREATE TABLE "user" (
-    id INT NOT NULL,
+    id UUID NOT NULL,
     name VARCHAR(100) NOT NULL,
     age VARCHAR(100) NOT NULL,
     PRIMARY KEY (id)
