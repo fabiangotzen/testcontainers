@@ -1,7 +1,5 @@
 package com.fago.testcontainers;
 
-import org.flywaydb.core.Flyway;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.junit.jupiter.api.Assertions;
@@ -19,14 +17,6 @@ public class UserConsumerIntegrationTest {
     @Autowired
     private UserProducer userProducer;
 
-//    @Autowired
-//    Flyway flyway;
-//
-//    @BeforeEach
-//    void cleanDatabase(){
-//        flyway.clean();
-//        flyway.migrate();
-//    }
     @Test
     void testConsumeUserMessage() {
         //arrange
