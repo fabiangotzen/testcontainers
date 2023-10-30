@@ -10,7 +10,7 @@ import java.util.UUID;
 import static java.time.Duration.ofSeconds;
 import static org.testcontainers.shaded.org.awaitility.Awaitility.await;
 
-@IntegrationTest
+@IntegrationTest(properties = {""})
 public class UserConsumerIntegrationTest {
 
     @Autowired
@@ -19,14 +19,14 @@ public class UserConsumerIntegrationTest {
     @Autowired
     private UserProducer userProducer;
 
-    @Autowired
-    Flyway flyway;
-
-    @BeforeEach
-    void cleanDatabase(){
-        flyway.clean();
-        flyway.migrate();
-    }
+//    @Autowired
+//    Flyway flyway;
+//
+//    @BeforeEach
+//    void cleanDatabase(){
+//        flyway.clean();
+//        flyway.migrate();
+//    }
     @Test
     void testConsumeUserMessage() {
         //arrange
